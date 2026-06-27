@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<style>
+@page { size: A4; margin: 0; }
+body { margin: 0; padding: 0; font-family: Tahoma, Arial, sans-serif; font-size: 8.5pt; color: #1A2332; width: 210mm; }
+table { border-collapse: collapse; width: 210mm; }
+.sb { width: 54mm; background-color: #0A2442; vertical-align: top; padding: 0; }
+.main { vertical-align: top; padding: 0; }
+.sb-inner { padding: 2mm; }
+.sb-photo { width: 40mm; height: 40mm; border-radius: 50%; background-color: #1B5E7A; border: 2px solid #D4A020; margin: 4mm auto 2mm; text-align: center; line-height: 40mm; color: #9ED9E2; font-size: 8pt; display: block; }
+.sb-name { color: #FFFFFF; font-size: 11pt; font-weight: bold; text-align: center; padding: 1mm 2mm 0.5mm; }
+.sb-role { color: #D4A020; font-size: 7.5pt; text-align: center; padding: 0 2mm 2mm; line-height: 1.4; }
+.sb-divider { height: 1px; background-color: #1AA6B7; margin: 0 3mm 2mm; }
+.sb-sec-hdr { background-color: #122840; padding: 1.5mm 2.5mm; margin: 0 1.5mm 1mm; }
+.sb-sec-t { color: #D4A020; font-size: 7pt; font-weight: bold; text-transform: uppercase; }
+.sb-t { color: #9ED9E2; font-size: 7pt; line-height: 1.4; padding: 0.3mm 2.5mm; }
+.sb-tw { color: #FFFFFF; font-size: 7pt; font-weight: bold; padding: 0.3mm 2.5mm; }
+.sb-tg { color: #D4A020; font-size: 7pt; font-weight: bold; padding: 0.3mm 2.5mm; }
+.edu-blk { border-left: 3px solid #D4A020; margin: 1mm 2.5mm; padding: 0.5mm 2mm; }
+.chip { background-color: #0C6A79; border: 0.5px solid #1AA6B7; color: #FFFFFF; font-size: 7pt; padding: 1mm 2.5mm; margin: 0.5mm 2mm; display: block; }
+.hdr { background-color: #0A2442; padding: 4mm 5mm; }
+.hdr-name { color: #FFFFFF; font-size: 17pt; font-weight: bold; }
+.hdr-en { color: #B8D9F0; font-size: 9pt; margin-top: 1mm; }
+.hdr-title { color: #A0C8E8; font-size: 8pt; margin-top: 0.5mm; }
+.hdr-contact { color: #80B8D8; font-size: 7.5pt; margin-top: 0.5mm; }
+.ybox { border: 1.2px solid #D4A020; background-color: #FEF5C8; margin: 2.5mm 3mm; padding: 2.5mm; border-left: 4px solid #D4A020; }
+.ybox-t { color: #5C3500; font-size: 8pt; font-weight: bold; margin-bottom: 1.5mm; }
+.yitem { color: #3A2000; font-size: 7pt; line-height: 1.5; padding-left: 8px; }
+.sec-hdr { color: #0B7B8C; font-size: 9pt; font-weight: bold; border-bottom: 1.5px solid #0B7B8C; margin: 2mm 3mm 1.5mm; padding-bottom: 0.5mm; }
+.job { margin: 0 3mm 2mm; }
+.job-hdr { background-color: #EBF4FF; padding: 1.5mm 2mm; }
+.job-period { background-color: #2E72BE; color: #FFFFFF; font-size: 7pt; font-weight: bold; padding: 0.5mm 2mm; display: inline-block; }
+.job-role { color: #0A2442; font-size: 8.5pt; font-weight: bold; display: inline; margin-left: 2mm; }
+.job-org { color: #0B7B8C; font-size: 7.5pt; padding: 0.5mm 2mm 0; font-style: italic; }
+.job-sup { color: #5A6A7A; font-size: 7pt; padding: 0 2mm 0.5mm; }
+.bul { color: #1A2332; font-size: 7.5pt; line-height: 1.4; padding: 0.3mm 2mm 0.3mm 10mm; }
+.rcard { border-left: 3px solid #0B7B8C; background-color: #E8F6F9; margin: 1mm 3mm 2mm; padding: 2mm; }
+.rlevel { color: #0A2442; font-size: 8pt; font-weight: bold; }
+.rtitle { color: #1A2332; font-size: 7.5pt; font-style: italic; margin-top: 1mm; line-height: 1.4; }
+.pub { border-left: 3px solid #2E72BE; background-color: #F0F6FF; margin: 1mm 3mm; padding: 2mm; }
+.pub-t { font-size: 7pt; color: #1A2332; line-height: 1.5; }
+.pub-doi { color: #2E72BE; font-size: 7pt; margin-top: 0.5mm; }
+.footer-row { background-color: #0A2442; }
+.footer-t { color: #72A6C8; font-size: 6.5pt; padding: 1.5mm 3mm; }
+.footer-pg { color: #D4A020; font-size: 7pt; font-weight: bold; padding: 1.5mm 3mm; text-align: right; }
+.pg-break { page-break-after: always; }
+.p2hdr { background-color: #EAF2FF; padding: 2mm 3mm; border-bottom: 1px solid #CCE0F5; }
+.p2hdr-t { color: #0B7B8C; font-size: 8.5pt; font-weight: bold; }
+.award-box { background-color: #2A1A00; border: 1px solid #D4A020; margin: 1.5mm 2mm; padding: 2mm; text-align: center; }
+.cert-row { margin: 0 2mm 1.5mm; }
+.cert-y { background-color: #122840; color: #D4A020; font-size: 6pt; padding: 0.5mm 1mm; display: inline; }
+.cert-t { color: #9ED9E2; font-size: 7pt; line-height: 1.35; }
+.cert-org { color: #6A7A8A; font-size: 6.5pt; font-style: italic; }
+</style></head><body>
+
+<!-- ═══ PAGE 1 ═══ -->
+<table><tr>
+<td class="sb" style="height:275mm;">
+<div class="sb-inner">
+  <div class="sb-photo">PHOTO</div>
+  <div class="sb-name">จุลเลขา สาวาโย</div>
+  <div class="sb-role">วิศวกรแหล่งน้ำ<br>นักอุทกธรณีวิทยา</div>
+  <div class="sb-divider"></div>
+  <div class="sb-sec-hdr"><div class="sb-sec-t">การศึกษา</div></div>
+  <div class="edu-blk">
+    <div class="sb-tw">ปริญญาโท</div>
+    <div class="sb-t">วิศวกรรมโยธา (แหล่งน้ำ)<br>มหาวิทยาลัยขอนแก่น</div>
+    <div class="sb-tg">2567 (2024) | GPA 3.43</div>
+  </div>
+  <div class="edu-blk" style="margin-top:1mm;">
+    <div class="sb-tw">ปริญญาตรี</div>
+    <div class="sb-t">เทคโนโลยีธรณี<br>มหาวิทยาลัยขอนแก่น</div>
+    <div class="sb-tg">2562 (2019) | GPA 3.06</div>
+  </div>
+  <div class="sb-sec-hdr" style="margin-top:2mm;"><div class="sb-sec-t">ความเชี่ยวชาญ</div></div>
+  <div class="sb-t">✓ อุทกวิทยา / อุทกธรณีวิทยา</div>
+  <div class="sb-t">✓ GIS &amp; Remote Sensing</div>
+  <div class="sb-t">✓ แบบจำลองน้ำบาดาล MODFLOW</div>
+  <div class="sb-t">✓ ประเมินความเสียหายน้ำท่วม</div>
+  <div class="sb-t">✓ วิเคราะห์ข้อมูลภูมิอากาศ</div>
+  <div class="sb-t">✓ งานภาคสนาม &amp; สำรวจ</div>
+  <div class="sb-sec-hdr" style="margin-top:2mm;"><div class="sb-sec-t">โปรแกรม / แบบจำลอง</div></div>
+  <div class="sb-t">▸ ArcGIS Pro / QGIS</div>
+  <div class="sb-t">▸ Visual MODFLOW Flex</div>
+  <div class="sb-t">▸ HEC-RAS / HEC-HMS</div>
+  <div class="sb-t">▸ HEC-FIA 3.1</div>
+  <div class="sb-t">▸ SWAT / WEAP</div>
+  <div class="sb-t">▸ Python / R</div>
+  <div class="sb-t">▸ Google Earth Engine</div>
+  <div class="sb-t">▸ AutoCAD / CorelDRAW</div>
+  <div class="sb-t">▸ ENVI / ERDAS</div>
+  <div class="sb-t">▸ Microsoft Office</div>
+  <div class="sb-sec-hdr" style="margin-top:2mm;"><div class="sb-sec-t">ภาษา</div></div>
+  <div class="sb-tw">ไทย : เจ้าของภาษา</div>
+  <div class="sb-t">อังกฤษ : ระดับกลาง (TOEIC 575)</div>
+  <div class="sb-sec-hdr" style="margin-top:2mm;"><div class="sb-sec-t">บุคลิกภาพ</div></div>
+  <div class="sb-t">✓ ละเอียดรอบคอบ &amp; รับผิดชอบสูง</div>
+  <div class="sb-t">✓ ทำงานเป็นทีม เรียนรู้เร็ว</div>
+  <div class="sb-t">✓ มุ่งมั่น &amp; กระตือรือร้น</div>
+</div>
+</td>
+<td class="main">
+  <div class="hdr">
+    <div class="hdr-name">จุลเลขา สาวาโย</div>
+    <div class="hdr-en">Joonlaykha Savayo</div>
+    <div class="hdr-title">นักอุทกวิทยา | GIS &amp; Hydrology Specialist | Water Resource Researcher</div>
+    <div class="hdr-contact">savayo1996@gmail.com &nbsp;|&nbsp; 095-669-3936 &nbsp;|&nbsp; jsavayo-ui.github.io &nbsp;|&nbsp; ขอนแก่น</div>
+  </div>
+  <div class="ybox">
+    <div class="ybox-t">จุดแข็งสำหรับ สทนช. (สำนักงานทรัพยากรน้ำแห่งชาติ)</div>
+    <div class="yitem">▸ ประสบการณ์ตรงด้านบริหารจัดการทรัพยากรน้ำระดับลุ่มน้ำ ลุ่มน้ำชี-มูล และระดับจังหวัด (ขอนแก่น)</div>
+    <div class="yitem">▸ เชี่ยวชาญ GIS แบบจำลองน้ำบาดาล Visual MODFLOW Flex และประเมินความเสียหายน้ำท่วม HEC-FIA 3.1</div>
+    <div class="yitem">▸ ผลงานวิจัยตีพิมพ์ Scopus Q2 (Engineering) และรางวัล MRC รองชนะเลิศอันดับ 3 ระดับนานาชาติ</div>
+  </div>
+  <div class="sec-hdr">ประสบการณ์การทำงาน</div>
+  <div class="job">
+    <div class="job-hdr"><span class="job-period">เม.ย. 2568 – ปัจจุบัน</span> <span class="job-role">ผู้จัดการโครงการ / ผู้ช่วยนักวิจัย</span></div>
+    <div class="job-org">ภาควิชาวิศวกรรมโยธา คณะวิศวกรรมศาสตร์ มหาวิทยาลัยขอนแก่น</div>
+    <div class="job-sup">หัวหน้าโครงการ: ผศ.ดร.โพยม สราภิรมย์</div>
+    <div class="bul">• โครงการแผนแม่บทการสนับสนุนการตัดสินใจการจัดการเติมน้ำใต้ดินในพื้นที่ลุ่มน้ำมูล (MARKKU) — mardss.kku.ac.th/page/</div>
+    <div class="bul">• โครงการการบริหารจัดการทรัพยากรน้ำแบบบูรณาการระดับจังหวัดที่เชื่อมโยงกับการสร้างความเข้มแข็งขององค์กรผู้ใช้น้ำและองค์กรปกครองส่วนท้องถิ่น จังหวัดขอนแก่น (น้ำตำบล 68)</div>
+    <div class="bul">• โครงการการบริหารจัดการทรัพยากรน้ำแบบบูรณาการระดับจังหวัดที่เชื่อมโยงกับองค์กรผู้ใช้น้ำและองค์กรปกครองส่วนท้องถิ่น จังหวัดขอนแก่น ระยะที่ 2 (น้ำจังหวัด 69)</div>
+    <div class="bul">• รับผิดชอบการประสานงาน จัดการข้อมูล และสนับสนุนการวิเคราะห์เชิงพื้นที่ (GIS) สำหรับโครงการบริหารน้ำระดับจังหวัดและลุ่มน้ำ</div>
+  </div>
+  <div class="job">
+    <div class="job-hdr"><span class="job-period">ม.ค. 2567 – เม.ย. 2568</span> <span class="job-role">ผู้ช่วยวิจัย (ผู้จัดการโครงการ / Lab Manager)</span></div>
+    <div class="job-org">คณะวิศวกรรมศาสตร์ มหาวิทยาลัยขอนแก่น (โครงการร่วมกับ กฟผ.)</div>
+    <div class="job-sup">หัวหน้าโครงการ: ดร.ณัฐวุฒิ หอมทอง</div>
+    <div class="bul">• โครงการระบบสนับสนุนการตัดสินใจ (DSS) สำหรับบริหารจัดการน้ำในเขื่อนอุบลรัตน์ ร่วมกับ กฟผ. ด้วยแบบจำลอง Visual MODFLOW Flex</div>
+    <div class="bul">• จัดทำแผนที่งบประมาณน้ำพลวัต (Dynamic Water Budget Map) พื้นที่ลุ่มน้ำชี</div>
+    <div class="bul">• งานวิจัยความหลากหลายทางชีวภาพเกษตรกรรม-เศรษฐกิจ (NE-EC Bioeconomy) ภาคตะวันออกเฉียงเหนือ</div>
+    <div class="bul">• สำรวจและจัดทำรายงานอนุรักษ์แหล่งหินปูนไทยสงวน (ภูมิทัศน์ธรณีวิทยา)</div>
+    <div class="bul">• ผู้ช่วยสอนรายวิชา GIS และ Remote Sensing ระดับปริญญาตรี คณะเทคโนโลยี มข.</div>
+    <div class="bul">• วิทยากรค่าย Earth Science Olympiad รุ่นที่ 3 ปี 2567 หัวข้อ Hydrogeology</div>
+  </div>
+</td>
+</tr>
+<tr class="footer-row">
+  <td colspan="2"><table width="100%"><tr>
+    <td class="footer-t">Resume – จุลเลขา สาวาโย | savayo1996@gmail.com | 095-669-3936</td>
+    <td class="footer-pg">1 / 2</td>
+  </tr></table></td>
+</tr>
+</table>
+
+<div class="pg-break"></div>
+
+<!-- ═══ PAGE 2 ═══ -->
+<table><tr>
+<td class="sb" style="height:275mm;">
+<div class="sb-inner">
+  <div style="background-color:#0D1F35;padding:2mm 2.5mm;margin-bottom:2mm;border-bottom:1px solid #1AA6B7;">
+    <div style="color:#FFFFFF;font-size:9pt;font-weight:bold;">จุลเลขา สาวาโย</div>
+    <div style="color:#D4A020;font-size:7pt;">วิศวกรแหล่งน้ำ | นักอุทกธรณีวิทยา</div>
+  </div>
+  <div class="sb-sec-hdr"><div class="sb-sec-t">ประกาศนียบัตร / อบรม</div></div>
+  <div class="cert-row">
+    <div><span class="cert-y">2566</span></div>
+    <div class="cert-t">แบบจำลองการไหลของน้ำบาดาลและน้ำใต้ดินสำหรับอุตสาหกรรมเหมืองแร่</div>
+    <div class="cert-org">สถาบันทรัพยากรน้ำบาดาล มหาวิทยาลัยขอนแก่น</div>
+  </div>
+  <div class="cert-row">
+    <div><span class="cert-y">2562</span></div>
+    <div class="cert-t">Short Visiting Program</div>
+    <div class="cert-org">มหาวิทยาลัยเกิ่นเทอ ประเทศเวียดนาม</div>
+  </div>
+  <div class="cert-row">
+    <div><span class="cert-y">2561</span></div>
+    <div class="cert-t">ฝึกปฏิบัติ: เครื่องบันทึกโคลนเจาะและธรณีวิทยาการผลิต</div>
+    <div class="cert-org">กองสำรวจและผลิตปิโตรเลียมภาคเหนือ</div>
+  </div>
+  <div class="cert-row">
+    <div><span class="cert-y">2561</span></div>
+    <div class="cert-t">ฝึกงาน: ฝ่ายสำรวจและผลิต ศูนย์พัฒนาปิโตรเลียม กรมพลังงานทหาร เชียงใหม่</div>
+    <div class="cert-org">ก.ค.–ส.ค. 2561</div>
+  </div>
+  <div class="cert-row">
+    <div><span class="cert-y">2560</span></div>
+    <div class="cert-t">วิทยาการพลังงานเพื่ออนาคตที่ยั่งยืน รุ่นที่ 2 STEA</div>
+    <div class="cert-org">สถาบันวิทยาการพลังงาน (วพน.)</div>
+  </div>
+  <div class="sb-sec-hdr" style="margin-top:2mm;"><div class="sb-sec-t">รางวัล</div></div>
+  <div class="award-box">
+    <div style="color:#D4A020;font-size:11pt;margin-bottom:1mm;">★</div>
+    <div style="color:#D4A020;font-size:7.5pt;font-weight:bold;">รองชนะเลิศอันดับ 3</div>
+    <div style="color:#E8CC80;font-size:7pt;line-height:1.4;margin-top:1mm;">การแข่งขันการประดิษฐ์<br>เครื่องวัดปริมาณน้ำฝน<br>Mekong River<br>Commission (MRC)</div>
+  </div>
+  <div class="sb-sec-hdr" style="margin-top:2mm;"><div class="sb-sec-t">ทักษะหลัก</div></div>
+  <div class="chip">อุทกวิทยา &amp; อุทกธรณีวิทยา</div>
+  <div class="chip">แบบจำลองน้ำผิวดิน / ใต้ดิน</div>
+  <div class="chip">GIS &amp; Remote Sensing</div>
+  <div class="chip">เก็บ / วิเคราะห์ข้อมูลภาคสนาม</div>
+  <div class="chip">บริหารโครงการวิจัย</div>
+  <div class="chip">ผู้ช่วยสอน / ฝึกอบรม</div>
+</div>
+</td>
+<td class="main">
+  <div class="p2hdr"><div class="p2hdr-t">ประสบการณ์การทำงาน (ต่อ)</div></div>
+  <div class="job" style="margin-top:2mm;">
+    <div class="job-hdr"><span class="job-period">ส.ค. 2564 – มี.ค. 2566</span> <span class="job-role">ผู้ช่วยนักวิจัย / ผู้ช่วยสอน | โครงการ Khon Kaen Smart City</span></div>
+    <div class="job-org">คณะวิศวกรรมศาสตร์ มหาวิทยาลัยขอนแก่น (ร่วมกับ กฟผ.)</div>
+    <div class="job-sup">หัวหน้าโครงการ: รศ.ดร.กิตติเวช ขันติยวิชัย</div>
+    <div class="bul">• โครงการประเมินความเสียหายจากน้ำท่วม (Flood Damage Assessment) ด้วยแบบจำลอง HEC-FIA 3.1 สำหรับพื้นที่เกษตรกรรมลุ่มน้ำชี-มูล ร่วมกับ กฟผ.</div>
+    <div class="bul">• โครงการ Smart City: วิเคราะห์ระบบระบายน้ำและน้ำท่วมขังในเขตเมืองขอนแก่น</div>
+    <div class="bul">• ผู้ช่วยสอนรายวิชา Hydrology, Fluid Mechanics, Hydraulic Engineering และ GIS ระดับปริญญาตรี</div>
+    <div class="bul">• ลงพื้นที่เก็บข้อมูลภาคสนามและสำรวจแหล่งน้ำในพื้นที่ภาคตะวันออกเฉียงเหนือ</div>
+  </div>
+  <div class="job">
+    <div class="job-hdr"><span class="job-period">มี.ค. – ต.ค. 2563</span> <span class="job-role">ผู้ช่วยนักอุทกธรณีวิทยา</span></div>
+    <div class="job-org">กรมทรัพยากรน้ำบาดาล ส่วนภูมิภาค เขต 4 ขอนแก่น</div>
+    <div class="bul">• สำรวจและประเมินศักยภาพแหล่งน้ำบาดาลในพื้นที่ลุ่มน้ำชีตอนกลาง จ.ขอนแก่น มหาสารคาม และร้อยเอ็ด</div>
+    <div class="bul">• จัดทำแผนที่อุทกธรณีวิทยาและรายงานศักยภาพน้ำบาดาลระดับตำบล ด้วยโปรแกรม ArcGIS Pro</div>
+    <div class="bul">• บันทึกข้อมูลบ่อน้ำบาดาล ระดับน้ำ คุณภาพน้ำ และธรณีวิทยาลงในฐานข้อมูลกรมน้ำบาดาล</div>
+  </div>
+  <div class="job">
+    <div class="job-hdr"><span class="job-period">ก.ค. – ส.ค. 2561</span> <span class="job-role">นักศึกษาฝึกงาน (Drilling Mud Logger)</span></div>
+    <div class="job-org">ศูนย์พัฒนาปิโตรเลียมภาคเหนือ จ.เชียงใหม่ | กรมพลังงานทหาร</div>
+    <div class="bul">• วิเคราะห์ตะกอนและสาร Drilling Mud จากหลุมเจาะสำรวจปิโตรเลียม (Well Logging)</div>
+    <div class="bul">• บันทึกและจัดทำรายงาน Lithology Log และ Mud Log สำหรับงานสำรวจธรณีวิทยาใต้ดิน</div>
+  </div>
+  <div class="sec-hdr">ผลงานวิชาการ / งานวิจัย</div>
+  <div class="rcard">
+    <div class="rlevel">ปริญญาโท — วิศวกรรมโยธา (ทรัพยากรแหล่งน้ำ) | มหาวิทยาลัยขอนแก่น</div>
+    <div class="rtitle">Assessment of Surface Water and Groundwater Potential Under Climate Change in the Lam Phaniang River Basin</div>
+  </div>
+  <div class="rcard">
+    <div class="rlevel">ปริญญาตรี — เทคโนโลยีธรณี | มหาวิทยาลัยขอนแก่น</div>
+    <div class="rtitle">การประเมินศักยภาพน้ำใต้ดินโดยใช้ระบบสารสนเทศภูมิศาสตร์และ Remote Sensing ลุ่มน้ำชี จ.มหาสารคาม และร้อยเอ็ด</div>
+  </div>
+  <div class="pub">
+    <div class="pub-t">Savayo, J. et al. (2025). Flood Damage Assessment Using HEC-FIA 3.1 in the Chi River Basin, Northeast Thailand. <em>Engineering Access and Scientific Research (EASR)</em>, Vol.54, Issue 4.</div>
+    <div class="pub-doi">DOI: 10.14456/easr.2025.40 | Scopus Q2 Engineering | ISSN 2985-0541</div>
+  </div>
+  <div style="padding: 2mm 3mm; margin-top: 2mm;">
+    <div style="font-size: 7.5pt; color: #1A2332;">ข้อมูลติดต่อ : savayo1996@gmail.com &nbsp;|&nbsp; โทร. 095-669-3936 &nbsp;|&nbsp; ขอนแก่น</div>
+  </div>
+</td>
+</tr>
+<tr class="footer-row">
+  <td colspan="2"><table width="100%"><tr>
+    <td class="footer-t">Resume – จุลเลขา สาวาโย | savayo1996@gmail.com | 095-669-3936</td>
+    <td class="footer-pg">2 / 2</td>
+  </tr></table></td>
+</tr>
+</table>
+</body></html>
